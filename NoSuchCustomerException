@@ -1,0 +1,11 @@
+package Customers;
+import java.lang.Exception;
+
+public class NoSuchCustomerException extends Exception{
+	
+		public NoSuchCustomerException(int custNo) {
+			super("Customer number does not exist "+ custNo);
+		
+		}
+			
+}
