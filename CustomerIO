@@ -1,13 +1,11 @@
-import java.util.Scanner;
+package Customers;
 
-public class CustomerIO {
-
-	public static void main (String[]args) throws NoSuchCustomerException{
-		Scanner keyboard = new Scanner(System.in);
-		System.out.println("Enter customer number");
-		int custNo = keyboard.nextInt();
+public class CustomerIO
+{
+	
+    public static Customer getCustomer(int custNo) throws NoSuchCustomerException {
 		
-		Customer cust = new Customer();
+        Customer cust = new Customer();
         if (custNo == 1000)
         {
             cust.name = "Andrew Antosca";
@@ -54,7 +52,8 @@ public class CustomerIO {
             return cust;
         }
         else
+        {
             throw new NoSuchCustomerException(custNo);
-		
-	}
+        }
+    }
 }
