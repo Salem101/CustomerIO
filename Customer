@@ -1,0 +1,37 @@
+package Customers;
+
+import java.lang.ProcessHandle.Info;
+import java.util.Scanner; 
+
+public class Customer extends CustomerIO{
+
+	public static void main (String[]args) throws Exception{
+
+		System.out.println("Welcome to the Customer Application");
+		Scanner keyboard = new Scanner(System.in);
+		
+		do {
+		System.out.println("Enter a customer number");
+		int custNo = keyboard.nextInt();
+		Customer cust = new Customer();
+		CustomerIO.getCustomer(custNo);
+		getNameAndAddress();
+		System.out.println("Display another customer?(yes/no)");
+		
+		}
+			while (keyboard.next().equalsIgnoreCase("YES"));
+		}
+
+	public String name;
+	public String address;
+	public String city;
+	public String state;
+	public String zipCode;
+	public static String again;
+	
+	public static void getNameAndAddress() {
+		System.out.println("Fetching the address");
+	
+	}
+	
+}
