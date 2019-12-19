@@ -30,7 +30,9 @@ public class Customer extends CustomerIO{
 	public static String again;
 	
 	public static void getNameAndAddress() {
-		System.out.println("Fetching the address");
+		cust.toString();
+		System.out.println("hello");
+		System.out.println(cust);
 	
 	}
 	
